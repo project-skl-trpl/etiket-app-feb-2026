@@ -1,3 +1,4 @@
+import 'package:etiket_app/presentation/ui/intro/login_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/core.dart';
@@ -7,6 +8,11 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(
+      const Duration(seconds: 3),
+      // ignore: use_build_context_synchronously
+      () => context.pushReplacement(const LoginPage()),
+    );
     return Scaffold(
       body: Center(
         child: Assets.images.logoBlue.image(width: 200, height: 200),
