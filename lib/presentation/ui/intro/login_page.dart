@@ -1,5 +1,5 @@
-import 'package:etiket_app/core/components/custom_text_field.dart';
 import 'package:etiket_app/core/core.dart';
+import 'package:etiket_app/presentation/ui/home/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -58,20 +58,26 @@ class LoginPage extends StatelessWidget {
                         showLabel: false,
                         obscureText: true,
                       ),
-                      SpaceHeight(height: 86.0),
-                      SizedBox(
-                        width: double.infinity,
-                        height: 50.0,
-                        child: ElevatedButton(
-                          onPressed: () {
-                            // print('Email: ${emailController.text}');
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primary,
-                            foregroundColor: AppColors.white,
-                          ),
-                          child: Text('Login'),
-                        ),
+                      SpaceHeight(height: 66.0),
+                      // SizedBox(
+                      //   width: double.infinity,
+                      //   height: 50.0,
+                      //   child: ElevatedButton(
+                      //     onPressed: () {
+                      //       print('Email: ${emailController.text}');
+                      //     },
+                      //     style: ElevatedButton.styleFrom(
+                      //       backgroundColor: AppColors.primary,
+                      //       foregroundColor: AppColors.white,
+                      //     ),
+                      //     child: Text('Login'),
+                      //   ),
+                      // ),
+                      Button.filled(
+                        onPressed: () {
+                          context.pushReplacement(MainPage());
+                        },
+                        label: 'Login',
                       ),
                       SpaceHeight(height: 86.0),
                       Center(
