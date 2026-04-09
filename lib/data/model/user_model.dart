@@ -2,7 +2,6 @@ import 'package:etiket_app/domain/entities/user_entity.dart';
 
 class UserModel extends UserEntity {
   UserModel({
-    required this.token,
     required super.id,
     required super.name,
     required super.email,
@@ -12,13 +11,10 @@ class UserModel extends UserEntity {
     required super.role,
   });
 
-  final String? token;
-
   factory UserModel.fromJson(Map<String, dynamic> json) {
     final user = json["user"]; // ambil object user
 
     return UserModel(
-      token: json["token"],
       id: user["id"],
       name: user["name"],
       email: user["email"],
@@ -30,7 +26,6 @@ class UserModel extends UserEntity {
   }
 
   Map<String, dynamic> toJson() => {
-    "token": token,
     "id": id,
     "name": name,
     "email": email,
