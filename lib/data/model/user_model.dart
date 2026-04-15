@@ -12,7 +12,7 @@ class UserModel extends UserEntity {
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
-    final user = json["user"]; // ambil object user
+    final user = json; // ambil object user
 
     return UserModel(
       id: user["id"],
